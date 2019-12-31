@@ -1,0 +1,147 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mindstorms dealer",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "GameSelectionIntent",
+          "slots": [
+            {
+              "name": "Game",
+              "type": "GameType"
+            }
+          ],
+          "samples": [
+            "I want to play {Game}",
+            "lets play {Game}",
+            "start {Game}",
+            "{Game}"
+          ]
+        },
+        {
+          "name": "GameHelpIntent",
+          "slots": [
+            {
+              "name": "GameName",
+              "type": "GameType"
+            }
+          ],
+          "samples": [
+            "How can I play {GameName}",
+            "How do you play {GameName}",
+            "Teach me to play {GameName}"
+          ]
+        },
+        {
+          "name": "PlayerCountIntent",
+          "slots": [
+            {
+              "name": "PlayerCount",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{PlayerCount} players",
+            "{PlayerCount}",
+            "we have {PlayerCount} players"
+          ]
+        },
+        {
+          "name": "GameTurnCommandIntent",
+          "slots": [
+            {
+              "name": "GameTurnCommand",
+              "type": "GameTurnCommandType"
+            }
+          ],
+          "samples": [
+            "{GameTurnCommand}",
+            "I will like to {GameTurnCommand}"
+          ]
+        },
+        {
+          "name": "ShuffleCardIntent",
+          "slots": [
+          ],
+          "samples": [
+            "shuffle the cards",
+            "shuffle cards"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "GameType",
+          "values": [
+            {
+              "name": {
+                "value": "uno"
+              }
+            },
+            {
+              "name": {
+                "value": "blackjack"
+              }
+            },
+            {
+              "name": {
+                "value": "goldfish"
+              }
+            }
+          ]
+        },
+        {
+          "name": "GameTurnCommandType",
+          "values": [
+            {
+              "name": {
+                "value": "hit"
+              }
+            },
+            {
+              "name": {
+                "value": "stand"
+              }
+            },
+            {
+              "name": {
+                "value": "bust"
+              }
+            },
+            {
+              "name": {
+                "value": "blackjack"
+              }
+            },
+            {
+              "name": {
+                "value": "deal once"
+              }
+            },
+            {
+              "name": {
+                "value": "deal twice"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
